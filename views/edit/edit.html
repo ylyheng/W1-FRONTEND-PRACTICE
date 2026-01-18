@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Quiz App - Edit</title>
+    <link rel="stylesheet" href="../../css/style.css" />
+    <link rel="stylesheet" href="style.css" />
+    <script defer src="edit.js"></script>
+  </head>
+  <body>
+    <!-- HEADER -->
+    <header class="header">
+      <div class="logo">
+        <span class="logo-icon"> <img src="../../img/logo.png" alt=""></span>
+        <h1>Quiz App</h1>
+      </div>
+      <nav>
+        <a href="../index.html" class="btn">Edit quiz</a>
+        <a href="../play/play.html" class="btn">Play quiz</a>
+      </nav>
+    </header>
+
+    <!-- MAIN CONTENT -->
+    <main>
+      <div class="edit-container">
+        <button class="add-btn" id="addBtn">Add question</button>
+        
+        <div id="questionsList" class="questions-list">
+          <!-- Questions will be rendered here -->
+        </div>
+      </div>
+    </main>
+
+    <!-- MODAL -->
+    <div id="modalOverlay" class="modal-overlay">
+      <div class="modal">
+        <div class="modal-header">
+          <h2>Create new question</h2>
+        </div>
+        <div class="modal-content">
+          <div class="form-group">
+            <label for="titleInput">Title</label>
+            <input type="text" id="titleInput" placeholder="Question title" />
+          </div>
+
+          <div class="form-group">
+            <label>Answers</label>
+            <input type="text" id="answerA" placeholder="Answer A" />
+            <input type="text" id="answerB" placeholder="Answer B" />
+            <input type="text" id="answerC" placeholder="Answer C" />
+            <input type="text" id="answerD" placeholder="Answer D" />
+          </div>
+
+          <div class="form-group">
+            <label for="correctSelect">Correct Answer</label>
+            <select id="correctSelect">
+              <option value="A">A</option>
+              <option value="B">B</option>
+              <option value="C">C</option>
+              <option value="D">D</option>
+            </select>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button class="btn-cancel" id="cancelBtn">Cancel</button>
+          <button class="btn-create" id="createBtn">CREATE</button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
